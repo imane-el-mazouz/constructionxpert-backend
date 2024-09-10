@@ -47,7 +47,7 @@ public class AuthenticationController {
     @PostMapping("/login")
     public ResponseEntity<?> authenticate(@RequestBody LoginUserDto loginUserDto) {
         try {
-            System.out.println(loginUserDto.getUserNameOrEmail());
+            System.out.println(loginUserDto.getUserNameOrEmail());  // Log user input for debugging
             User authenticatedUser = authenticationService.authenticate(loginUserDto);
             Role role = authenticatedUser.getRole();
 
@@ -55,13 +55,16 @@ public class AuthenticationController {
 
             LoginResponse loginResponse = new LoginResponse();
             loginResponse.setToken(jwtToken);
+            loginResponse.setRole(role.name());
             loginResponse.setExpiresIn(jwtService.getExpirationTime());
 
-            return ResponseEntity.ok(jwtToken);
+            return ResponseEntity.ok(loginResponse);
         } catch (UserNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
         } catch (Exception ex) {
+            ex.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred during login.");
         }
     }
+
 }

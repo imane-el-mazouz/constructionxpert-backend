@@ -7,9 +7,9 @@
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/src/main/java/com/gateway/filter/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/src/main/java/com/gateway/filter/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/configs/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/configs/SecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/service/AuthenticationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,38 +40,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProjectServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ResourceServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.TaskServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/ConstructionXpert-Services-Microservices-Partie-2-/ConstructionXpert/user-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.ProjectServiceApplication.executor": "Debug",
+    "Spring Boot.ResourceServiceApplication.executor": "Run",
+    "Spring Boot.TaskServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/ConstructionXpert-Services-Microservices-Partie-2-/ConstructionXpert/user-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "http.proxy",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -93,7 +93,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.constructionxpert.eureka.EurekaServerApplication" />
@@ -154,13 +154,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -175,6 +168,7 @@
       <workItem from="1725887982556" duration="5490000" />
       <workItem from="1725957295934" duration="7680000" />
       <workItem from="1725974064110" duration="6605000" />
+      <workItem from="1726004079527" duration="2942000" />
     </task>
     <servers />
   </component>
