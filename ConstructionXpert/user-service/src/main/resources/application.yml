@@ -1,0 +1,30 @@
+server:
+  port: 8099
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/users_db?createDatabaseIfNotExist=true
+    username: root
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: none
+  flyway:
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+security:
+  jwt:
+    secret-key: 357638792F423F4428472B4B6250655368566D597133743677397A2443264629
+    expiration-time: 3600000

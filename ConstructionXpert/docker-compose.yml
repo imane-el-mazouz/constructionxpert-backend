@@ -1,0 +1,57 @@
+version: '3'
+services:
+  eureka-server:
+    build: ./eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - eureka-network
+
+  gateway-service:
+    build: ./gateway-service
+    ports:
+      - "8888:8888"
+    depends_on:
+      - eureka-server
+    networks:
+      - eureka-network
+
+  project-service:
+    build: ./project-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - eureka-server
+    networks:
+      - eureka-network
+
+  resource-service:
+    build: ./resource-service
+    ports:
+      - "8083:8083"
+    depends_on:
+      - eureka-server
+    networks:
+      - eureka-network
+
+  user-service:
+    build: ./user-service
+    ports:
+      - "8099:8099"
+    depends_on:
+      - eureka-server
+    networks:
+      - eureka-network
+
+  task-service:
+    build: ./task-service
+    ports:
+      - "8082:8082"
+    depends_on:
+      - eureka-server
+    networks:
+      - eureka-network
+
+networks:
+  eureka-network:
+    driver: bridge
