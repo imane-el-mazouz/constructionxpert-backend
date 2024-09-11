@@ -26,13 +26,13 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(HttpMethod.POST, "/api/tasks").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/api/tasks/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/api/tasks/**").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/api/tasks").hasAnyRole("ADMIN", "CUSTOMER")
-                        .requestMatchers(HttpMethod.GET, "/api/tasks/project/**").hasAnyRole("ADMIN", "CUSTOMER")
-                        .requestMatchers(HttpMethod.GET, "/api/tasks/**").hasAnyRole("ADMIN", "CUSTOMER")
-                        .requestMatchers(HttpMethod.GET, "/api/tasks/**/exist").hasAnyRole("ADMIN", "CUSTOMER")
+//                        .requestMatchers(HttpMethod.POST, "/api/tasks").hasRole("CUSTOMER")
+//                        .requestMatchers(HttpMethod.PUT, "/api/tasks/**").hasRole("CUSTOMER")
+//                        .requestMatchers(HttpMethod.DELETE, "/api/tasks/**").hasRole("CUSTOMER")
+//                        .requestMatchers(HttpMethod.GET, "/api/tasks").hasAnyRole("ADMIN", "CUSTOMER")
+//                        .requestMatchers(HttpMethod.GET, "/api/tasks/project/**").hasAnyRole("CUSTOMER")
+//                        .requestMatchers(HttpMethod.GET, "/api/tasks/**").hasAnyRole( "CUSTOMER")
+//                        .requestMatchers(HttpMethod.GET, "/api/tasks/**/exist").hasAnyRole("CUSTOMER")
                         .anyRequest().authenticated()
                 );
 
