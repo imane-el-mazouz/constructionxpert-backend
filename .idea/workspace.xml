@@ -5,11 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/StatisticsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/repository/CustomerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/src/main/java/com/gateway/filter/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/src/main/java/com/gateway/filter/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/repository/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/repository/ResourceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/repository/TaskRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/AdminDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/AdminDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/db/migration/V1__create_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/db/migration/V1__create_schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +58,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.ConstructionXpert.eureka-server: Compose Deployment.executor": "Run",
+    "Docker.eureka-server/Dockerfile.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -50,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.ProjectServiceApplication.executor": "Debug",
+    "Spring Boot.ProjectServiceApplication.executor": "Run",
     "Spring Boot.ResourceServiceApplication.executor": "Run",
     "Spring Boot.TaskServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
@@ -142,6 +160,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -169,11 +191,23 @@
       <workItem from="1725957295934" duration="7680000" />
       <workItem from="1725974064110" duration="6605000" />
       <workItem from="1726004079527" duration="2942000" />
+      <workItem from="1726041961995" duration="12915000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AdminController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

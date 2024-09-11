@@ -47,7 +47,7 @@ public class AuthenticationController {
     @PostMapping("/login")
     public ResponseEntity<?> authenticate(@RequestBody LoginUserDto loginUserDto) {
         try {
-            System.out.println(loginUserDto.getUserNameOrEmail());  // Log user input for debugging
+            System.out.println(loginUserDto.getUserNameOrEmail());
             User authenticatedUser = authenticationService.authenticate(loginUserDto);
             Role role = authenticatedUser.getRole();
 
