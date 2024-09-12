@@ -5,27 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/db/migration/V1__Create_Project_Table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/resources/db/migration/V1__Create_Project_Table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/UserServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/AdminDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/AdminDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/UserDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +54,7 @@
     "Docker.ConstructionXpert.resource-service: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.task-service: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.user-service: Compose Deployment.executor": "Run",
+    "Docker.ConstructionXpert.userdb: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.users_db: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert: Compose Deployment.executor": "Run",
     "Docker.eureka-server/Dockerfile.executor": "Run",
@@ -78,6 +69,10 @@
     "Maven.gateway-service [install].executor": "Run",
     "Maven.project-service [clean].executor": "Run",
     "Maven.project-service [install].executor": "Run",
+    "Maven.resource-service [clean].executor": "Run",
+    "Maven.resource-service [install].executor": "Run",
+    "Maven.task-service [clean].executor": "Run",
+    "Maven.task-service [install].executor": "Run",
     "Maven.user-service [clean].executor": "Run",
     "Maven.user-service [install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -131,7 +126,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.ConstructionXpert: Compose Deployment">
+  <component name="RunManager" selected="Docker.ConstructionXpert.task-service: Compose Deployment">
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gateway.GatewayServiceApplication" />
@@ -175,12 +170,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="ConstructionXpert.eureka-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="ConstructionXpert.project-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="eureka-server" />
+              <option value="project-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
@@ -188,12 +183,38 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="ConstructionXpert.user-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="ConstructionXpert.resource-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="user-service" />
+              <option value="resource-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConstructionXpert.task-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="task-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConstructionXpert.userdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="userdb" />
             </list>
           </option>
           <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
@@ -213,29 +234,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="gateway-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="ConstructionXpert/gateway-service/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="user-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="ConstructionXpert/user-service/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.ConstructionXpert.task-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.resource-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.project-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.userdb: Compose Deployment" />
         <item itemvalue="Docker.ConstructionXpert: Compose Deployment" />
-        <item itemvalue="Docker.ConstructionXpert.user-service: Compose Deployment" />
-        <item itemvalue="Docker.ConstructionXpert.eureka-server: Compose Deployment" />
-        <item itemvalue="Docker.user-service/Dockerfile" />
-        <item itemvalue="Docker.gateway-service/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +260,7 @@
       <workItem from="1725974064110" duration="6605000" />
       <workItem from="1726004079527" duration="2942000" />
       <workItem from="1726041961995" duration="12915000" />
-      <workItem from="1726063731532" duration="23110000" />
+      <workItem from="1726063731532" duration="30350000" />
     </task>
     <servers />
   </component>

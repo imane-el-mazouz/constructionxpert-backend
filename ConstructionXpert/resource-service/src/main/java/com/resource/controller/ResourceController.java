@@ -27,7 +27,7 @@ public class ResourceController {
     @Autowired
     private ResourceService resourceService;
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @PostMapping
     public Resource createResource(@RequestBody Resource resource) {
         return resourceService.createResource(resource);
@@ -45,13 +45,13 @@ public class ResourceController {
         return ResponseEntity.ok(resourceService.getResourcesByTaskId(taskId));
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @PutMapping("/resource/{id}")
     public Resource updateResource(@PathVariable Long id, @RequestBody Resource resourceDetails) throws ResourceNotFoundException {
         return resourceService.updateResource(id, resourceDetails);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteResource(@PathVariable Long id) {
         resourceService.deleteResource(id);

@@ -37,7 +37,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(registeredUser);
     }
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/add-admin")
     public ResponseEntity<User> addAdmin(@RequestBody AdminDTO adminDTO) {
         User newAdmin = authenticationService.addAdmin(adminDTO);
