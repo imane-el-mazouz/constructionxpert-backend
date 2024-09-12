@@ -1,57 +1,138 @@
-version: '3'
+version: "3.8"
 services:
   eureka-server:
-    build: ./eureka-server
+    build:
+      context: ./eureka-server
     ports:
       - "8761:8761"
     networks:
-      - eureka-network
+      - microservices-net
 
   gateway-service:
-    build: ./gateway-service
+    build:
+      context: ./gateway-service
     ports:
       - "8888:8888"
     depends_on:
       - eureka-server
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
     networks:
-      - eureka-network
+      - microservices-net
 
   project-service:
-    build: ./project-service
+    build:
+      context: ./project-service
     ports:
       - "8081:8081"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
+      - projectdb
     networks:
-      - eureka-network
+      - microservices-net
 
   resource-service:
-    build: ./resource-service
+    build:
+      context: ./resource-service
     ports:
       - "8083:8083"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
+      - resourcedb
     networks:
-      - eureka-network
-
-  user-service:
-    build: ./user-service
-    ports:
-      - "8099:8099"
-    depends_on:
-      - eureka-server
-    networks:
-      - eureka-network
+      - microservices-net
 
   task-service:
-    build: ./task-service
+    build:
+      context: ./task-service
     ports:
       - "8082:8082"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
     depends_on:
       - eureka-server
+      - taskdb
     networks:
-      - eureka-network
+      - microservices-net
+
+  user-service:
+    build:
+      context: ./user-service
+    ports:
+      - "8099:8099"
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    depends_on:
+      - eureka-server
+      - userdb
+    deploy:
+      restart_policy:
+        condition: on-failure
+    networks:
+      - microservices-net
+
+  projectdb:
+    image: "mysql:latest"
+    restart: always
+    environment:
+      MYSQL_DATABASE: projects_db
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - project-db:/var/lib/mysql
+    networks:
+      - microservices-net
+    ports:
+      - "3311:3306"
+
+  resourcedb:
+      image: "mysql:latest"
+      restart: always
+      environment:
+        MYSQL_DATABASE: resources_db
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      volumes:
+        - resource-db:/var/lib/mysql
+      networks:
+        - microservices-net
+      ports:
+        - "3308:3306"
+
+  taskdb:
+      image: "mysql:latest"
+      restart: always
+      environment:
+        MYSQL_DATABASE: tasks_db
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      volumes:
+        - task-db:/var/lib/mysql
+      networks:
+        - microservices-net
+      ports:
+        - "3309:3306"
+
+  userdb:
+      image: "mysql:latest"
+      restart: always
+      environment:
+        MYSQL_DATABASE: users_db
+        MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      volumes:
+        - user-db:/var/lib/mysql
+      networks:
+        - microservices-net
+      ports:
+        - "3310:3306"
+
+volumes:
+  project-db:
+  resource-db:
+  task-db:
+  user-db:
 
 networks:
-  eureka-network:
+  microservices-net:
     driver: bridge

@@ -1,3 +1,21 @@
+#spring:
+#  application:
+#    name: eureka-server
+#  cloud:
+#    discovery:
+#      enabled: true
+#  eureka:
+#    server:
+#      enable-self-preservation: false
+#    client:
+#      register-with-eureka: false
+#      fetch-registry: false
+#    instance:
+#      prefer-ip-address: true
+#server:
+#  port: 8761
+
+
 server:
   port: 8761
 
