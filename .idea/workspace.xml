@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/config/AuthFeignInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/controller/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/AdminDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/AdminDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/java/com/user/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/enums/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/enums/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/feign/ProjectClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/feign/ProjectClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/main/java/com/task/model/Task.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +51,7 @@
     "Docker.ConstructionXpert.project-service: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.resource-service: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.task-service: Compose Deployment.executor": "Run",
+    "Docker.ConstructionXpert.taskdb: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.user-service: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.userdb: Compose Deployment.executor": "Run",
     "Docker.ConstructionXpert.users_db: Compose Deployment.executor": "Run",
@@ -60,6 +59,7 @@
     "Docker.eureka-server/Dockerfile.executor": "Run",
     "Docker.gateway-service/Dockerfile.executor": "Run",
     "Docker.project-service/Dockerfile.executor": "Run",
+    "Docker.task-service/Dockerfile.executor": "Run",
     "Docker.user-service/Dockerfile.executor": "Run",
     "Maven.constructionxpert-services [clean].executor": "Run",
     "Maven.constructionxpert-services [install].executor": "Run",
@@ -162,9 +162,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructionXpert: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="ConstructionXpert.eureka-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="services">
+            <list>
+              <option value="eureka-server" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConstructionXpert.gateway-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="gateway-service" />
+            </list>
+          </option>
           <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
         </settings>
       </deployment>
@@ -209,19 +227,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="ConstructionXpert.userdb: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="userdb" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -237,10 +242,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.ConstructionXpert.task-service: Compose Deployment" />
-        <item itemvalue="Docker.ConstructionXpert.resource-service: Compose Deployment" />
         <item itemvalue="Docker.ConstructionXpert.project-service: Compose Deployment" />
-        <item itemvalue="Docker.ConstructionXpert.userdb: Compose Deployment" />
-        <item itemvalue="Docker.ConstructionXpert: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.resource-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.gateway-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.eureka-server: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +265,7 @@
       <workItem from="1725974064110" duration="6605000" />
       <workItem from="1726004079527" duration="2942000" />
       <workItem from="1726041961995" duration="12915000" />
-      <workItem from="1726063731532" duration="30350000" />
+      <workItem from="1726063731532" duration="40647000" />
     </task>
     <servers />
   </component>

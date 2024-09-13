@@ -10,5 +10,10 @@ public interface ProjectClient {
     @GetMapping("/api/projects/{id}/exist")
     Boolean existProject(@PathVariable("id") Long id);
 
+//    @GetMapping("/api/projects/{id}/exist")
+//    boolean existProject(
+//            @PathVariable("id") Long id,
+//            @RequestHeader("Authorization") String authorization
+//    );
 
 }

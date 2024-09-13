@@ -1,6 +1,5 @@
 package com.task.model;
 
-import com.task.enums.Status;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.*;
 import lombok.*;
@@ -21,8 +20,9 @@ public class Task {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    @Enumerated(EnumType.STRING)
-    private Status status;
+//    @Enumerated(EnumType.STRING)
+//    private Status status;
+    private String status ;
 
     @Column(name = "project_id", nullable = false)
     private Long projectId;

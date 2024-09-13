@@ -57,7 +57,7 @@ public class TaskController {
         return ResponseEntity.ok().build();
     }
 
-    @PreAuthorize("hasRole('CUSTOMER') or hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @GetMapping("/{id}/exist")
     public ResponseEntity<Boolean> existTask(@PathVariable("id") Long id) {
         boolean exists = taskService.existTask(id);

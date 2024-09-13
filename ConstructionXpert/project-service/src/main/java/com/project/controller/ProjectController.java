@@ -43,17 +43,19 @@ public class ProjectController {
         return projectService.getAllProjects();
     }
 
-    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+
+
     @GetMapping("/{id}/exist")
     public ResponseEntity<Boolean> existProject(@PathVariable("id") Long id) {
         boolean exist = projectService.existProject(id);
         return ResponseEntity.ok(exist);
     }
 
-    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @GetMapping("/{id}")
     public Optional<Project> getProjectById(@PathVariable("id") Long id){
         Optional<Project> project = projectService.getProjectById(id);
         return projectService.getProjectById(id);
     }
+
+
 }
