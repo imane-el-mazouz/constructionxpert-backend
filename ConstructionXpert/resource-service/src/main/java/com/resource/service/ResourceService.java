@@ -60,4 +60,8 @@ public class ResourceService {
         resourceRepository.deleteById(id);
         ResponseEntity.ok().build();
     }
+
+    public Resource findById(Long id) {
+        return resourceRepository.findById(id).orElse(null);
+    }
 }

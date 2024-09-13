@@ -57,4 +57,15 @@ public class ResourceController {
         resourceService.deleteResource(id);
         return ResponseEntity.ok().build();
     }
+
+    @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
+    @GetMapping("/get/{id}")
+    public ResponseEntity<Resource> getResourceById(@PathVariable Long id) {
+        Resource resource = resourceService.findById(id);
+        if (resource != null) {
+            return ResponseEntity.ok(resource);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
