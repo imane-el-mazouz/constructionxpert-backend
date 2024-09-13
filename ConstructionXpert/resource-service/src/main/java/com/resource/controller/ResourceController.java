@@ -41,7 +41,7 @@ public class ResourceController {
 
     @PreAuthorize("hasAnyRole('ADMIN', 'CUSTOMER')")
     @GetMapping("/task/{taskId}")
-    public ResponseEntity<List<Resource>> getTasksByProjectId(@PathVariable Long taskId) throws ResourceNotFoundException {
+    public ResponseEntity<List<Resource>> getResourcesByTaskId(@PathVariable Long taskId) throws ResourceNotFoundException {
         return ResponseEntity.ok(resourceService.getResourcesByTaskId(taskId));
     }
 
