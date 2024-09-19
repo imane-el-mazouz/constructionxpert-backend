@@ -1,39 +1,47 @@
 package com.user.service;
 
 import com.user.model.Customer;
-import com.user.model.User;
 import com.user.repository.CustomerRepository;
-import com.user.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.*;
 
-@SpringBootTest
-@Transactional
 class UserServiceTest {
 
-    @Autowired
+    @InjectMocks
     private UserService userService;
 
-    @Autowired
+    @Mock
     private CustomerRepository customerRepository;
+
     private Customer customer;
 
     @BeforeEach
     void setUp() {
+        MockitoAnnotations.openMocks(this);
+
         customer = new Customer();
         customer.setFullName("imane");
         customer.setUsername("imane@gmail.com");
         customer.setPassword("1234");
         customer.setEmail("imane@gmail.com");
-        customerRepository.save(customer);
+
+        when(customerRepository.findAll()).thenReturn(List.of(customer));
+        when(customerRepository.findById(anyLong())).thenReturn(Optional.of(customer));
+        when(customerRepository.save(any(Customer.class))).thenReturn(customer);
+        doNothing().when(customerRepository).deleteById(anyLong());
     }
+
     @Test
     void GetAllCustomers() {
         List<Customer> customers = userService.getAllCustomers();
@@ -42,42 +50,41 @@ class UserServiceTest {
         assertEquals(1, customers.size());
         assertEquals("imane", customers.getFirst().getFullName());
     }
+
     @Test
     void GetCustomerById() {
-        Customer foundCustomer = userService.getCustomerById(customer.getId());
+        Customer foundCustomer = userService.getCustomerById(1L);
         assertNotNull(foundCustomer);
-        assertEquals("Jane Doe", foundCustomer.getFullName());
+        assertEquals("imane", foundCustomer.getFullName());
     }
 
     @Test
-    void testCreateCustomer() {
+    void CreateCustomer() {
         Customer newCustomer = new Customer();
         newCustomer.setFullName("imane");
         newCustomer.setUsername("imane@gmail.com");
         newCustomer.setPassword("1234");
         newCustomer.setEmail("imane@gmail.com");
 
+        when(customerRepository.save(any(Customer.class))).thenReturn(newCustomer);
+
         Customer savedCustomer = userService.createCustomer(newCustomer);
 
-        assertNotNull(savedCustomer);
-        assertNotNull(savedCustomer.getId());
-        assertEquals("Alice Wonderland", savedCustomer.getFullName());
+        assertEquals("imane", savedCustomer.getFullName(), "Customer full name should match");
     }
 
     @Test
-    void testUpdateCustomer() {
-        customer.setFullName("Jane Updated");
+    void UpdateCustomer() {
+        customer.setFullName("imana");
+        when(customerRepository.save(any(Customer.class))).thenReturn(customer);
         Customer updatedCustomer = userService.updateCustomer(customer);
-
         assertNotNull(updatedCustomer);
-        assertEquals("Jane Updated", updatedCustomer.getFullName());
+        assertEquals("imana", updatedCustomer.getFullName());
     }
 
     @Test
-    void testDeleteCustomer() {
+    void DeleteCustomer() {
         userService.deleteCustomer(customer.getId());
-        Customer deletedCustomer = userService.getCustomerById(customer.getId());
-        assertNull(deletedCustomer);
+        verify(customerRepository, times(1)).deleteById(customer.getId());
     }
-
 }

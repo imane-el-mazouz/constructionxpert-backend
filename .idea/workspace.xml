@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" afterDir="false" />
@@ -71,9 +72,11 @@
     "JUnit.TaskServiceTest.testDeleteTask.executor": "Run",
     "JUnit.TaskServiceTest.testGetAllTasks.executor": "Run",
     "JUnit.TaskServiceTest.testUpdateTask.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
     "JUnit.UserServiceTest.testCreateCustomer.executor": "Run",
     "JUnit.UserServiceTest.testGetAllCustomers.executor": "Run",
     "JUnit.UserServiceTest.testGetAllUsers.executor": "Run",
+    "JUnit.UserServiceTest.testGetCustomerById.executor": "Run",
     "JUnit.UserServiceTest.testGetUserById.executor": "Run",
     "Maven.constructionxpert-services [clean].executor": "Run",
     "Maven.constructionxpert-services [install].executor": "Run",
@@ -145,19 +148,18 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.testGetAllCustomers">
-    <configuration name="TaskServiceTest.TaskNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="task-service" />
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.task.service.*" />
+          <option name="PATTERN" value="com.user.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.task.service" />
-      <option name="MAIN_CLASS_NAME" value="com.task.service.TaskServiceTest" />
-      <option name="METHOD_NAME" value="TaskNotExist" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.user.service" />
+      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,7 +196,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.testGetAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.testGetCustomerById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -204,7 +206,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.user.service" />
       <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetAllUsers" />
+      <option name="METHOD_NAME" value="testGetCustomerById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -275,11 +277,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest.testGetAllCustomers" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.testGetCustomerById" />
         <item itemvalue="JUnit.UserServiceTest.testCreateCustomer" />
+        <item itemvalue="JUnit.UserServiceTest.testGetAllCustomers" />
         <item itemvalue="JUnit.UserServiceTest.testGetUserById" />
-        <item itemvalue="JUnit.UserServiceTest.testGetAllUsers" />
-        <item itemvalue="JUnit.TaskServiceTest.TaskNotExist" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +302,7 @@
       <workItem from="1726004079527" duration="2942000" />
       <workItem from="1726041961995" duration="12915000" />
       <workItem from="1726063731532" duration="52255000" />
-      <workItem from="1726741795452" duration="9353000" />
+      <workItem from="1726741795452" duration="10070000" />
     </task>
     <servers />
   </component>

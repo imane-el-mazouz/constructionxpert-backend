@@ -24,3 +24,9 @@ eureka:
     fetch-registry: true
   instance:
     prefer-ip-address: true
+
+feign:
+  client:
+    config:
+      task-service:
+        url: http://task-service:8082
