@@ -9,8 +9,10 @@ services:
       - microservices-net
 
   gateway-service:
+
     build:
       context: ./gateway-service
+
     ports:
       - "8888:8888"
     depends_on:
@@ -47,6 +49,7 @@ services:
       - microservices-net
 
   task-service:
+    image: imane1233333333333333/task-service:latest
     build:
       context: ./task-service
     ports:

@@ -16,11 +16,11 @@ public class ProjectService {
 
     @Autowired
     private ProjectRepository projectRepository;
-      private final TaskClient taskClient;
 
-      public ProjectService(TaskClient taskClient) {
-         this.taskClient = taskClient;
-      }
+//    @Autowired
+//     private TaskClient taskClient;
+
+
 
 
     public Project createProject(Project project) {
@@ -42,7 +42,7 @@ public class ProjectService {
     }
 
     public void deleteProject(Long id) {
-        taskClient.deleteTask(id);
+//        taskClient.deleteTask(id);
         projectRepository.deleteById(id);
         ResponseEntity.ok().build();
     }
