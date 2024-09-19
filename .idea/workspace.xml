@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/feign/TaskClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/controller/ResourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/resource-service/src/main/java/com/resource/service/ResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/ProjectServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/ProjectServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/project-service/src/main/java/com/project/service/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,67 +41,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.ConstructionXpert.eureka-server: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.gateway-service: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.project-service: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.resource-service: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.task-service: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.taskdb: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.user-service: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.userdb: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert.users_db: Compose Deployment.executor": "Run",
-    "Docker.ConstructionXpert: Compose Deployment.executor": "Run",
-    "Docker.eureka-server/Dockerfile.executor": "Run",
-    "Docker.gateway-service/Dockerfile.executor": "Run",
-    "Docker.project-service/Dockerfile.executor": "Run",
-    "Docker.task-service/Dockerfile.executor": "Run",
-    "Docker.user-service/Dockerfile.executor": "Run",
-    "Maven.constructionxpert-services [clean].executor": "Run",
-    "Maven.constructionxpert-services [install].executor": "Run",
-    "Maven.eureka-server [clean].executor": "Run",
-    "Maven.eureka-server [install].executor": "Run",
-    "Maven.gateway-service [clean].executor": "Run",
-    "Maven.gateway-service [install].executor": "Run",
-    "Maven.project-service [clean].executor": "Run",
-    "Maven.project-service [install].executor": "Run",
-    "Maven.resource-service [clean].executor": "Run",
-    "Maven.resource-service [install].executor": "Run",
-    "Maven.task-service [clean].executor": "Run",
-    "Maven.task-service [install].executor": "Run",
-    "Maven.user-service [clean].executor": "Run",
-    "Maven.user-service [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.EurekaServerApplication.executor": "Run",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.ProjectServiceApplication.executor": "Run",
-    "Spring Boot.ResourceServiceApplication.executor": "Run",
-    "Spring Boot.TaskServiceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/ConstructionXpert-Services-Microservices-Partie-2-/ConstructionXpert/user-service",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "http.proxy",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.ConstructionXpert.eureka-server: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.gateway-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.project-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.resource-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.task-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.taskdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.user-service: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.userdb: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert.users_db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.ConstructionXpert: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.eureka-server/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.gateway-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.project-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.task-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.user-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.constructionxpert-services [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.eureka-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.eureka-server [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.gateway-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.project-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.project-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.resource-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.resource-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.task-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.task-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProjectServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ResourceServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TaskServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/ConstructionXpert-Services-Microservices-Partie-2-/ConstructionXpert/user-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -121,7 +124,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.ConstructionXpert.resource-service: Compose Deployment">
+  <component name="RunManager" selected="JUnit.TaskServiceTest">
+    <configuration name="TaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.task.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.task.service" />
+      <option name="MAIN_CLASS_NAME" value="com.task.service.TaskServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gateway.GatewayServiceApplication" />
@@ -156,19 +174,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="ConstructionXpert.eureka-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="eureka-server" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
     </configuration>
     <configuration name="ConstructionXpert.gateway-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -236,11 +241,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TaskServiceTest" />
         <item itemvalue="Docker.ConstructionXpert.resource-service: Compose Deployment" />
         <item itemvalue="Docker.ConstructionXpert.task-service: Compose Deployment" />
         <item itemvalue="Docker.ConstructionXpert.project-service: Compose Deployment" />
         <item itemvalue="Docker.ConstructionXpert.gateway-service: Compose Deployment" />
-        <item itemvalue="Docker.ConstructionXpert.eureka-server: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +265,8 @@
       <workItem from="1725974064110" duration="6605000" />
       <workItem from="1726004079527" duration="2942000" />
       <workItem from="1726041961995" duration="12915000" />
-      <workItem from="1726063731532" duration="45345000" />
+      <workItem from="1726063731532" duration="52255000" />
+      <workItem from="1726741795452" duration="4105000" />
     </task>
     <servers />
   </component>

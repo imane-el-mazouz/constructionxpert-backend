@@ -1,6 +1,7 @@
 package com.project.service;
 
 import com.project.exception.ProjectNotFoundException;
+import com.project.feign.TaskClient;
 import com.project.model.Project;
 import com.project.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,12 @@ public class ProjectService {
 
     @Autowired
     private ProjectRepository projectRepository;
+      private final TaskClient taskClient;
+
+      public ProjectService(TaskClient taskClient) {
+         this.taskClient = taskClient;
+      }
+
 
     public Project createProject(Project project) {
         return projectRepository.save(project);
@@ -35,6 +42,7 @@ public class ProjectService {
     }
 
     public void deleteProject(Long id) {
+        taskClient.deleteTask(id);
         projectRepository.deleteById(id);
         ResponseEntity.ok().build();
     }
