@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'imane1233333333333333/task-service'
+        DOCKER_IMAGE = 'imane1233333333333333/construction'
+        SERVICES = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
         DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
         SONARQUBE = 'SonarQube Server'
+        SONARQUBE_TOKEN = credentials('squ_4bb2d39e989393f7b1b90a43b4eb78ed1c83c188')
     }
 
     stages {
@@ -29,27 +31,31 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv(SONARQUBE) {
-                    sh 'mvn sonar:sonar'
+                    sh "mvn sonar:sonar -Dsonar.login=${SONARQUBE_TOKEN}"
                 }
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build Docker Images') {
             steps {
                 script {
                     def imageTag = "${env.BUILD_NUMBER}"
-                    sh "docker build -t ${DOCKER_IMAGE}:${imageTag} ./task-service"
+                    for (service in SERVICES) {
+                        sh "docker build -t ${DOCKER_IMAGE}:${service}-${imageTag} ./${service}"
+                    }
                 }
             }
         }
 
-        stage('Push Docker Image') {
+        stage('Push Docker Images') {
             steps {
                 script {
                     def imageTag = "${env.BUILD_NUMBER}"
                     withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
-                        sh "docker push ${DOCKER_IMAGE}:${imageTag}"
+                        for (service in SERVICES) {
+                            sh "docker push ${DOCKER_IMAGE}:${service}-${imageTag}"
+                        }
                     }
                 }
             }

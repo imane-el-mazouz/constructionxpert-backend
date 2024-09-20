@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8431d72-7631-4876-b013-ad159b803d4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/service/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/task-service/src/test/java/com/task/service/TaskServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/UserServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/UserServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/Jenkinsfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/test/java/com/user/service/AuthenticationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/task-service/Jenkinsfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ConstructionXpert/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,7 @@
     "Docker.project-service/Dockerfile.executor": "Run",
     "Docker.task-service/Dockerfile.executor": "Run",
     "Docker.user-service/Dockerfile.executor": "Run",
+    "JUnit.AuthenticationServiceTest.testSignupUserAlreadyExistsByUsername.executor": "Run",
     "JUnit.TaskServiceTest.CreateTaskFailed.executor": "Run",
     "JUnit.TaskServiceTest.DeleteTask.executor": "Run",
     "JUnit.TaskServiceTest.ExistTask.executor": "Run",
@@ -98,6 +99,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.GatewayServiceApplication.executor": "Run",
     "Spring Boot.ProjectServiceApplication.executor": "Run",
@@ -131,10 +133,14 @@
       <recent name="C:\Users\user\Desktop\ConstructionXpert-Services-Microservices-Partie-2-\ConstructionXpert" />
       <recent name="C:\Users\user\Desktop\ConstructionXpert-Services-Microservices-Partie-2-\ConstructionXpert\gateway-service" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\constructionxpert-backend\ConstructionXpert" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.user.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.config" />
       <recent name="com.user" />
       <recent name="com.resource.config" />
       <recent name="com.gateway.filter" />
@@ -148,8 +154,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest">
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AuthenticationServiceTest.testAddAdminUserAlreadyExistsByUsername">
+    <configuration name="AuthenticationServiceTest.testAddAdminUserAlreadyExistsByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -158,29 +164,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.user.service" />
-      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.testCreateCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.user.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.user.service" />
-      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testCreateCustomer" />
+      <option name="MAIN_CLASS_NAME" value="com.user.service.AuthenticationServiceTest" />
+      <option name="METHOD_NAME" value="testAddAdminUserAlreadyExistsByUsername" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.testGetAllCustomers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthenticationServiceTest.testSignupUserAlreadyExistsByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -189,41 +180,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.user.service" />
-      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetAllCustomers" />
+      <option name="MAIN_CLASS_NAME" value="com.user.service.AuthenticationServiceTest" />
+      <option name="METHOD_NAME" value="testSignupUserAlreadyExistsByUsername" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.testGetCustomerById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.user.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.user.service" />
-      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetCustomerById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.testGetUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.user.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.user.service" />
-      <option name="MAIN_CLASS_NAME" value="com.user.service.UserServiceTest" />
-      <option name="METHOD_NAME" value="testGetUserById" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.constructionxpert.eureka.EurekaServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -263,6 +229,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConstructionXpert.project-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="project-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConstructionXpert.task-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="task-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="ConstructionXpert.user-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="user-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="ConstructionXpert/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -277,11 +282,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserServiceTest.testGetCustomerById" />
-        <item itemvalue="JUnit.UserServiceTest.testCreateCustomer" />
-        <item itemvalue="JUnit.UserServiceTest.testGetAllCustomers" />
-        <item itemvalue="JUnit.UserServiceTest.testGetUserById" />
+        <item itemvalue="JUnit.AuthenticationServiceTest.testAddAdminUserAlreadyExistsByUsername" />
+        <item itemvalue="JUnit.AuthenticationServiceTest.testSignupUserAlreadyExistsByUsername" />
+        <item itemvalue="Docker.ConstructionXpert.project-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.user-service: Compose Deployment" />
+        <item itemvalue="Docker.ConstructionXpert.task-service: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +307,7 @@
       <workItem from="1726004079527" duration="2942000" />
       <workItem from="1726041961995" duration="12915000" />
       <workItem from="1726063731532" duration="52255000" />
-      <workItem from="1726741795452" duration="10070000" />
+      <workItem from="1726741795452" duration="21311000" />
     </task>
     <servers />
   </component>

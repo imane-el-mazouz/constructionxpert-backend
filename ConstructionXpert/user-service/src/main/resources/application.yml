@@ -1,75 +1,18 @@
-#server:
-#  port: 8099
-#
-#spring:
-#  application:
-#    name: user-service
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/user_db_2?createDatabaseIfNotExist=true
-#    username: root
-#    password: ''
-#  jpa:
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#    hibernate:
-#      ddl-auto: none
-#  flyway:
-#    baseline-on-migrate: true
-#    locations: classpath:db/migration
-#
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://admin:admin@localhost:8761/eureka/
-#    register-with-eureka: true
-#    fetch-registry: true
-#  instance:
-#    prefer-ip-address: true
-#
-#
-#security:
-#  jwt:
-#    secret-key: 357638792F423F4428472B4B6250655368566D597133743677397A2443264629
-#    expiration-time: 3600000
-
-
-
-#server:
-#  port: 8099
-#
-#spring:
-#  application:
-#    name: user-service
-#  datasource:
-#    url: jdbc:mysql:3306/user_db_2?createDatabaseIfNotExist=true
-#    username: root
-#    password: ''
-#  jpa:
-#    hibernate:
-#      ddl-auto: none
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#  flyway:
-#    baseline-on-migrate: true
-#    locations: classpath:db/migration
-
-
 spring:
   application:
-    name: user-service
+    name:
+      user-service
   datasource:
-    url: jdbc:mysql://userdb:3306/users_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://userdb:3306/users_db?createDatabaseIfNotExist=true
     username: root
-    password: 1234
+    password:
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL8Dialect
   flyway:
     baseline-on-migrate: true
     locations: classpath:db/migration
-    repair-on-migrate: true
-
-server:
-  port: 8099
 
 eureka:
   client:
