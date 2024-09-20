@@ -46,24 +46,6 @@ spring:
     baseline-on-migrate: true
     locations: classpath:db/migration
 
-#server:
-#  port: 8099
-#
-#spring:
-#  application:
-#    name: user-service
-#  datasource:
-#    url: jdbc:mysql:3306/user_db_2?createDatabaseIfNotExist=true
-#    username: root
-#    password: ''
-#  jpa:
-#    hibernate:
-#      ddl-auto: none
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#  flyway:
-#    baseline-on-migrate: true
-#    locations: classpath:db/migration
-
 eureka:
   client:
     service-url:

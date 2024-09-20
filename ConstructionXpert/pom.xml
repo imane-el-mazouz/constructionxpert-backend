@@ -27,6 +27,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2023.0.3</spring-cloud.version>
+            <sonar.host.url>http://localhost:9000</sonar.host.url>
+            <sonar.login>squ_4bb2d39e989393f7b1b90a43b4eb78ed1c83c188</sonar.login>
     </properties>
 
     <dependencyManagement>
@@ -105,4 +107,23 @@
             <version>2.6.0</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>sonar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+        </plugins>
+    </build>
+
 </project>
