@@ -14,19 +14,18 @@ import java.util.Optional;
 @Service
 public class ProjectService {
 
+    private final ProjectRepository projectRepository;
+    private final TaskClient taskClient;
+
     @Autowired
-    private ProjectRepository projectRepository;
-
-//    @Autowired
-//     private TaskClient taskClient;
-
-
-
+    public ProjectService(ProjectRepository projectRepository, TaskClient taskClient) {
+        this.projectRepository = projectRepository;
+        this.taskClient = taskClient;
+    }
 
     public Project createProject(Project project) {
         return projectRepository.save(project);
     }
-
     public List<Project> getAllProjects() {
         return projectRepository.findAll();
     }
@@ -42,7 +41,7 @@ public class ProjectService {
     }
 
     public void deleteProject(Long id) {
-//        taskClient.deleteTask(id);
+        taskClient.deleteTask(id);
         projectRepository.deleteById(id);
         ResponseEntity.ok().build();
     }
