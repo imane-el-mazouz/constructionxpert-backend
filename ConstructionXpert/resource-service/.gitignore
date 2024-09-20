@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Ensure Dockerfile and application.yml are not ignored ###
+!Dockerfile
+!**/src/main/resources/application.yml
