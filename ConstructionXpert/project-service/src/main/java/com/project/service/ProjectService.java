@@ -14,19 +14,18 @@ import java.util.Optional;
 @Service
 public class ProjectService {
 
+    private final ProjectRepository projectRepository;
+    private final TaskClient taskClient;
+
     @Autowired
-    private ProjectRepository projectRepository;
-      private final TaskClient taskClient;
-
-      public ProjectService(TaskClient taskClient) {
-         this.taskClient = taskClient;
-      }
-
+    public ProjectService(ProjectRepository projectRepository, TaskClient taskClient) {
+        this.projectRepository = projectRepository;
+        this.taskClient = taskClient;
+    }
 
     public Project createProject(Project project) {
         return projectRepository.save(project);
     }
-
     public List<Project> getAllProjects() {
         return projectRepository.findAll();
     }
