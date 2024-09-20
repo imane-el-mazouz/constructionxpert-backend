@@ -19,3 +19,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+
+feign:
+  client:
+    config:
+      task-service:
+        url: http://task-service:8082
