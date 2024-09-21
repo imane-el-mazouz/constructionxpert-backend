@@ -5,9 +5,9 @@ spring:
   application:
     name: task-service
   datasource:
-    url: jdbc:mysql://taskdb:3306/tasks_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://taskdb:3306/tasks_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password:
+    password: 1234
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
@@ -19,7 +19,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
     register-with-eureka: true
     fetch-registry: true
   instance:
