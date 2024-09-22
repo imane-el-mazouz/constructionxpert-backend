@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'imane1233333333333333/construction'
+        DOCKER_COMPOSE_FILE = 'docker-compose.yml'
         SERVICES = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
         DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
         SONARQUBE = 'SonarQube Server'
