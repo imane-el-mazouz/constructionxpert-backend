@@ -6,11 +6,12 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = 'imane1233333333333333/construction'
+        DOCKER_HUB_REPO = 'imane1233333333333333/construction'
+        DOCKER_IMAGE = 'constructionxpert'
         DOCKER_COMPOSE_FILE = 'docker-compose.yml'
-        DOCKER_CREDENTIALS_ID = 'docker-hub-credentials'
-        SONARQUBE = 'SonarQube Server'
-        SONARQUBE_TOKEN = credentials('squ_4bb2d39e989393f7b1b90a43b4eb78ed1c83c188')
+        DOCKER_CREDENTIALS_ID = 'docker-credentials-id'
+        SONARQUBE = 'sonarqube-credentiels'
+        SONARQUBE_TOKEN = credentials('SonarQubeToken')
     }
 
     stages {
@@ -42,9 +43,9 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 script {
-                    def SERVICES = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
                     def imageTag = "${env.BUILD_NUMBER}"
-                    for (service in SERVICES) {
+                    def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+                    for (service in services) {
                         bat "docker build -t ${DOCKER_IMAGE}/${service}:${imageTag} ./${service}"
                     }
                 }
@@ -54,11 +55,11 @@ pipeline {
         stage('Push Docker Images') {
             steps {
                 script {
-                    def SERVICES = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
                     def imageTag = "${env.BUILD_NUMBER}"
                     withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                         bat 'echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin'
-                        for (service in SERVICES) {
+                        def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+                        for (service in services) {
                             bat "docker push ${DOCKER_IMAGE}/${service}:${imageTag}"
                         }
                     }
@@ -66,13 +67,21 @@ pipeline {
             }
         }
 
+        stage('Quality Gate Check') {
+            steps {
+                timeout(time: 5, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+
         stage('Tag and Push Docker Images') {
             steps {
                 script {
-                    def SERVICES = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
                     docker.withRegistry('https://index.docker.io/v1/', DOCKER_CREDENTIALS_ID) {
-                        SERVICES.each { service ->
-                            def imageName = "${DOCKER_IMAGE}/${service}"
+                        def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
+                        services.each { service ->
+                            def imageName = "${DOCKER_HUB_REPO}/${service}"
                             bat """
                                 docker tag ${DOCKER_IMAGE}/${service}:${env.BUILD_NUMBER} ${imageName}:latest
                                 docker push ${imageName}:latest
@@ -86,7 +95,13 @@ pipeline {
 
     post {
         always {
-            junit '**/target/surefire-reports/*.xml'
+            cleanWs()
+        }
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
         }
     }
 }

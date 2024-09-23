@@ -79,7 +79,7 @@ class ResourceServiceTest {
 
         assertFalse(result.isEmpty());
         assertEquals(1, result.size());
-        assertEquals(testResource.getName(), result.getFirst().getName());
+        assertEquals(testResource.getName(), result.get(0).getName()); // Changed from getFirst() to get(0)
         verify(taskClient).existTask(1L);
         verify(resourceRepository).findByTaskId(1L);
     }
@@ -102,7 +102,7 @@ class ResourceServiceTest {
 
         assertFalse(result.isEmpty());
         assertEquals(1, result.size());
-        assertEquals(testResource.getName(), result.getFirst().getName());
+        assertEquals(testResource.getName(), result.get(0).getName()); // Changed from getFirst() to get(0)
         verify(resourceRepository).findAll();
     }
 

@@ -48,8 +48,7 @@ class UserServiceTest {
         assertNotNull(customers);
         assertFalse(customers.isEmpty());
         assertEquals(1, customers.size());
-        assertEquals("imane", customers.getFirst().getFullName());
-    }
+        assertEquals("imane", customers.get(0).getFullName());    }
 
     @Test
     void GetCustomerById() {

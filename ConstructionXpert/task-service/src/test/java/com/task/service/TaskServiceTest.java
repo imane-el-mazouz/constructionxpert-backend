@@ -12,7 +12,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -65,7 +64,6 @@ class TaskServiceTest {
         verify(taskRepository, times(1)).save(task);
     }
 
-
     @Test
     public void GetTasksByProjectId() throws TaskNotFoundException {
         when(projectClient.existProject(anyLong())).thenReturn(true);
@@ -73,7 +71,7 @@ class TaskServiceTest {
         List<Task> tasks = taskService.getTasksByProjectId(100L);
         assertNotNull(tasks);
         assertEquals(1, tasks.size());
-        assertEquals(task.getProjectId(), tasks.getFirst().getProjectId());
+        assertEquals(task.getProjectId(), tasks.get(0).getProjectId()); // Changed from getFirst() to get(0)
         verify(taskRepository, times(1)).findByProjectId(100L);
     }
 
@@ -92,7 +90,7 @@ class TaskServiceTest {
         List<Task> tasks = taskService.getAllTasks();
         assertNotNull(tasks);
         assertEquals(1, tasks.size());
-        assertEquals(task.getId(), tasks.getFirst().getId());
+        assertEquals(task.getId(), tasks.get(0).getId()); // Changed from getFirst() to get(0)
         verify(taskRepository, times(1)).findAll();
     }
 
