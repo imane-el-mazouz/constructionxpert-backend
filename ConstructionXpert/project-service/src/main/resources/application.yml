@@ -2,10 +2,12 @@ server:
   port: 8081
 
 spring:
+  application:
+    name: project-service
   datasource:
     url: jdbc:mysql://projectdb:3306/projects_db?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
     username: root
-    password: 1234
+    password:
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
@@ -24,8 +26,3 @@ eureka:
   instance:
     prefer-ip-address: true
 
-feign:
-  client:
-    config:
-      task-service:
-        url: http://task-service:8082
