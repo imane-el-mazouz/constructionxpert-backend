@@ -24,7 +24,7 @@
         <module>gateway-service</module>
     </modules>
 
-    <properties>
+        <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2023.0.3</spring-cloud.version>
             <maven.compiler.source>17</maven.compiler.source>
