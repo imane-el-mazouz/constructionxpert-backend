@@ -4,8 +4,11 @@ import com.resource.exception.ResourceNotFoundException;
 import com.resource.feign.TaskClient;
 import com.resource.model.Resource;
 import com.resource.repository.ResourceRepository;
+import com.resource.repository.ResourceSpecification;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -63,5 +66,9 @@ public class ResourceService {
 
     public Resource findById(Long id) {
         return resourceRepository.findById(id).orElse(null);
+    }
+
+    public Page<Resource> getFilteredResources(String provider, Integer minQuantity, Integer maxQuantity, Pageable pageable) {
+        return resourceRepository.findAll(ResourceSpecification.filterByCriteria(provider, minQuantity, maxQuantity), pageable);
     }
 }

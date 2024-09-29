@@ -3,12 +3,17 @@ package com.project.service;
 import com.project.exception.ProjectNotFoundException;
 import com.project.model.Project;
 import com.project.repository.ProjectRepository;
+import com.project.repository.ProjectSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 @Service
 public class ProjectService {
@@ -50,5 +55,9 @@ public class ProjectService {
 
     public Boolean existProject(Long id) {
         return projectRepository.findById(id).isPresent();
+    }
+
+    public Page<Project> getFilteredProjects(Double minBudget, Double maxBudget, Date startDate, Date endDate, Pageable pageable) {
+        return projectRepository.findAll(ProjectSpecification.filterByCriteria(minBudget, maxBudget, startDate, endDate), pageable);
     }
 }
