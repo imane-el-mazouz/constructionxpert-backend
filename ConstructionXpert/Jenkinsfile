@@ -41,7 +41,7 @@ pipeline {
             }
         }
 
-stage('Build Docker Images') {
+       stage('Build Docker Images') {
             steps {
                 script {
                     def services = ['eureka-server', 'gateway-service', 'project-service', 'resource-service', 'task-service', 'user-service']
